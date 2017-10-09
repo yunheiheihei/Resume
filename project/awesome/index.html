@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AWESOME</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+    <style type="text/css">
+
+        .hd{background: #1f272d;border-bottom:1px solid #39434a;line-height: 37px;position: fixed;top:0;width: 100%;z-index: 5;}
+        .hd a{color: #6d6d6d;cursor: pointer;}
+        .hd img{margin: 0 10px;cursor: pointer;}
+        .mgt38{margin-top: 38px;}
+
+        .navbar{background: #283036;}
+        .pd5{padding: 5px;}
+        .navbar img{height: 100%;}
+        .navbar li a{font-size: 16px;}
+        .pdtb15{padding-top: 15px;padding-bottom: 15px;}
+        .nav > li > .pdlr0{padding-left:0px;padding-right: 0px;}
+
+        .banner{background: #f04949;padding-top: 179px;padding-bottom: 42px;color: white;}
+        .banner .text{padding-top: 80px;}
+        .banner h1{line-height: 64px;font-size: 40px;margin-bottom: 32px;animation: hshow 1.5s ease;}
+        .banner p{line-height: 24px;font-size: 16px;animation: pshow 3s ease-in-out;}
+        .banner img{opacity: 1;animation: imgshow 3s ease-in-out;}
+
+        @keyframes imgshow {
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+        }
+        @keyframes hshow {
+            0%{transform: translateX(900px)}
+            100%{transform: translateX(0px)}
+        }
+        @keyframes pshow {
+            0%{transform: translateX(900px)}
+            100%{transform: translateX(0px)}
+        }
+
+        .page1{padding-top: 44px;text-align: center;padding-bottom: 82px;}
+        .page1 h3{margin-top: 0;margin-bottom: 0;line-height: 104px;font-size: 36px;color: #ef4949;}
+        .page1 p{margin-bottom: 0;line-height: 24px;font-size: 14px;color: #333333;}
+
+
+        .page2{margin-bottom: 80px;}
+        .page2 h3{margin-top: 0;margin-bottom: 0;line-height: 40px;font-size: 24px;color: #343434;}
+        .page2 li{border-top:1px solid #f14949;border-bottom:1px solid #f14949;border-right:1px solid #f14949;}
+        .page2 .nav-pills li a{color:#686868;}
+        .page2 .nav-pills li{border-radius: 0;}
+        .page2 .nav-pills .lastli{border-radius: 0 5px 5px 0;}
+        .page2 .nav-pills .firstli{border-radius: 5px 0 0 5px;border-left:1px solid #f14949;}
+        .page2 .nav-pills > li + li{margin-left: 0;}
+        .page2 .nav-pills .newact a{background: #f14949 !important;color: white !important;}
+        .page2 ul{margin-bottom: 42px;float: right;}
+        .page2 .thumbnail{background: #ebebeb;text-align: center;}
+        .page2 .thumbnail h3{font-size: 12px;font-weight: bold;text-align: center;color: #010101;line-height: 26px;margin-top: 10px;}
+        .page2 .thumbnail p{font-size: 12px;text-align: center;color: #010101;margin: 0;line-height: 21px;margin-bottom: 10px;}
+        .page2 .thumbnail .caption{padding: 0;}
+        .page2 .thumbnail:hover{transform: translateY(-15px);transition:all 0.5s;}
+        .page2 .newact h3,.page2 .newact p{color: white;}
+        .page2 .newact{background: #f14949;}
+
+        .page3{background: url("images/tc110.png") no-repeat;background-attachment:fixed;text-align: center;padding-top: 60px;margin-bottom: 108px;background-size: cover;}
+        .mgtb0{margin-bottom: 0;margin-top: 0;}
+        .page3 h3{font-size: 46px;color: white;line-height: 79px;}
+        .page3 p{font-size: 14px;color: white;line-height: 25px;margin-bottom: 32px;}
+        .page3 button{font-size: 14px;color: white;line-height: 62px;border: 2px solid white;background: transparent;padding: 0 48px;font-size: 24px;margin-bottom: 85px;}
+
+        .page4 h4{color: #f14948;line-height: 28px;font-size: 16px;margin-bottom: 18px;}
+        .page4 p{color: #6c6c6c;line-height: 20px;font-size: 12px;margin-bottom: 20px;}
+
+        .page5{margin-bottom: 30px;}
+        .page5 h3{color: #343434;line-height: 94px;font-size: 24px;}
+        .page5 h4{color: #4e4e4e;line-height: 25px;font-size: 14px;margin-bottom: 12px;}
+        .page5 p{color: #838383;line-height: 21px;font-size: 12px;}
+        .page5 .media a .picps{position: absolute;top:0;left:15px;}
+        .page5 .media a img{border-top:7px solid #f14949;}
+        .page5 .media{margin-bottom: 42px;}
+        .page5 .panel-group h4{margin-bottom: 0;}
+        .page5 .panel-default{border-radius: 0;border: none;}
+        .page5 .panel-group .panel-heading + .panel-collapse > .panel-body{border-top: none;}
+        .page5 .panel-group .panel-heading{border-radius: 0;background: #d3d3d3;padding: 0;}
+        .page5 .panel-group .panel-heading h4 a{display: block;padding: 7px 15px;}
+        .page5 .panel-group .newact{background: #f14949;}
+        .page5 .panel-group .newact h4 a{color: white;}
+        .page5 .panel-group .panel-heading h4 a:hover{text-decoration: none;}
+        .page5 .panel-group .panel-heading h4 a:focus{text-decoration: none;}
+        .page5 .media-left{position: relative;}
+        .page5 .media-left:hover{transform: rotateY(360deg);transition: all 1s;}
+
+
+
+        .page6{background: #f04949;text-align: center;padding-top: 25px;padding-bottom: 24px;}
+        .page6 .item h4{line-height: 68px;color: white;font-size: 30px;}
+        .page6 .item p{line-height: 18px;color: white;font-size: 14px;margin-bottom: 48px;}
+        .page6 .item h5{line-height: 88px;color: white;font-size: 28px;margin-top: 0;margin-bottom: 0;}
+        .page6 ol{text-align: right;left: 80%;top:3%;max-width: 15%;margin-left: 0;margin-bottom: 0;max-height: 5%;z-index: 2;}
+        .page6 .item img:hover{animation: pic 3s;}
+        @keyframes pic {
+            0%{transform: rotateY(0deg) scale(1);}
+            50%{transform: rotateY(720deg) scale(1.2);}
+            100%{transform: rotateY(0deg) scale(1);}
+        }
+
+        .footer{background: #283036;padding-top: 78px;text-align: center;padding-bottom: 80px;}
+        .footer .pic{margin-bottom: 48px;}
+        .footer dl{margin-bottom: 0;}
+        .footer dt,.footer dd{line-height: 29px;color: white;font-size: 12px;}
+        .footer dd{display: inline-block;}
+        .footer dd span{margin: 0 10px;}
+        .footer .goto{background: #f04949;display: inline-block;position: fixed;right: 5%;top: 80%;color: white;line-height: 40px;border-radius: 50%;width: 40px;z-index: 10;cursor: pointer;}
+
+        .center-vertical{position:relative;top:50%;transform:translateY(-50%);}
+
+        @media screen and (max-width: 1170px) {
+            .banner .text{padding-top: 20px;}
+        }
+
+        @media screen and (max-width: 768px) {
+            .hd a{display: none;}
+            .banner img{display: none;}
+            .banner{text-align: center;}
+            .banner{padding-top: 129px;}
+            .page2{text-align: center;}
+            .page2 ul{display: inline-block;float: none;}
+
+
+        }
+        @media screen and (min-width: 768px){
+            .navbar-nav > li > a{padding-top: 30px;padding-bottom: 30px;}
+        }
+        @media screen and (max-width: 992px){
+            .nav > li > a{padding-left:10px;padding-right: 10px;}
+        }
+
+
+    </style>
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            (function () {
+                $('.page2 .nav-pills > li').click(function () {
+                     $(this).addClass('newact').siblings().removeClass('newact');
+                })
+            })();
+
+            (function () {
+                $('.page2 .thumbnail').click(function () {
+                    $(this).toggleClass('newact');
+                })
+            })();
+
+            (function () {
+                $('.page5 .panel-group .panel-heading').click(function () {
+                    $('.page5 .panel-group .panel-heading').each(function () {
+                         $(this).removeClass('newact');
+                        $(this).find('span').removeClass('glyphicon-plus').addClass('glyphicon-minus');
+                    });
+                    $(this).addClass('newact');
+                    $(this).find('span').removeClass('glyphicon-minus').addClass('glyphicon-plus');
+                })
+            })();
+
+            (function () {
+                $('.footer .goto').click(function () {
+                    $('html,body').animate({'scrollTop':0},1000,'easeInQuint');
+                })
+            })()
+
+
+            
+        })
+
+    </script>
+
+</head>
+<body>
+    <header class="hd">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="pull-left"><img src="images/awesome_modify_03.jpg"><a>Sunday, February 16 ,2014</a></div>
+                    <div class="pull-left"><img src="images/awesome_modify_05.jpg"><a>+86 13888888888</a></div>
+                    <div class="pull-left"><img src="images/awesome_modify_07.jpg"><a>yourmail@gmail.com</a></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pull-right"><img src="images/awesome_modify_17.jpg"></div>
+                    <div class="pull-right"><img src="images/awesome_modify_15.jpg"></div>
+                    <div class="pull-right"><img src="images/awesome_modify_13.jpg"></div>
+                    <div class="pull-right"><img src="images/awesome_modify_11.jpg"></div>
+                    <div class="pull-right"><img src="images/awesome_modify_09.jpg"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar navbar-default navbar-fixed-top mgt38 navbar-inverse">
+        <div class="container">
+            <div class="navbar-header pdtb15">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand pd5" href="#"><img src="images/logo.png" class="img-responsive"/></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolios</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Our Products</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#" class="pdlr0">|&nbsp;&nbsp;<span class="glyphicon glyphicon-search"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="banner">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-5">
+                     <a href="#">
+                         <img class="media-object img-responsive" src="images/img.png" alt="">
+                     </a>
+                 </div>
+                 <div class="col-md-6 col-md-offset-1">
+                     <div class="text">
+                         <h1 class="text-uppercase">An Amazing Responsive wordpress theme</h1>
+                         <p>Lorem ipsum ex vix illud nonummy novum tation et his. At vix scriptaset patrioque scribentur, at pro fugit erts verterem molestiae, sed et vivendo ali Lorem ipsum ex vix illud nonummy, novum tation et his. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus.</p>
+                     </div>
+                 </div>
+             </div>
+         </div>
+    </section>
+    <div class="container page1">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Some Amazing Features</h3>
+            </div>
+            <div class="col-md-12">
+                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio, gravida at.Cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet erorem ipsum dolor sit amet consectetuer adipiscing elit. Mauris fermentum dictum magna.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container page2">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>Recent Portfolio</h3>
+            </div>
+            <div class="col-xs-12 col-sm-8">
+                <div>
+                    <ul class="nav nav-pills" role="tablist">
+                        <li role="presentation" class="newact firstli"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">ALL</a></li>
+                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">CATEGORY1</a></li>
+                        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">CATEGORY2</a></li>
+                        <li role="presentation" class="lastli"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">CATEGORY3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="thumbnail newact">
+                                    <img src="images/tc 116.png" alt="">
+                                    <div class="caption">
+                                        <h3 class="text-uppercase">Responsive Design</h3>
+                                        <p class="text-uppercase">Quisque euismod orci ut et ..</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/tc 113.png" alt="">
+                                    <div class="caption">
+                                        <h3 class="text-uppercase">Responsive Design</h3>
+                                        <p class="text-uppercase">Quisque euismod orci ut et ..</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/tc 114.png" alt="">
+                                    <div class="caption">
+                                        <h3 class="text-uppercase">Responsive Design</h3>
+                                        <p class="text-uppercase">Quisque euismod orci ut et ..</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="thumbnail">
+                                    <img src="images/tc 115.png" alt="">
+                                    <div class="caption">
+                                        <h3 class="text-uppercase">Responsive Design</h3>
+                                        <p class="text-uppercase">Quisque euismod orci ut et ..</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="thumbnail newact">
+                                    <img src="images/tc 113.png" alt="">
+                                    <div class="caption">
+                                        <h3 class="text-uppercase">Responsive Design</h3>
+                                        <p class="text-uppercase">Quisque euismod orci ut et ..</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="messages">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="thumbnail newact">
+                                    <img src="images/tc 114.png" alt="">
+                                    <div class="caption">
+                                        <h3 class="text-uppercase">Responsive Design</h3>
+                                        <p class="text-uppercase">Quisque euismod orci ut et ..</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="settings">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="thumbnail newact">
+                                    <img src="images/tc 115.png" alt="">
+                                    <div class="caption">
+                                        <h3 class="text-uppercase">Responsive Design</h3>
+                                        <p class="text-uppercase">Quisque euismod orci ut et ..</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page3">
+        <div class="container">
+            <div class="col-md-12">
+               <h3 class="mgtb0">Welcome to our website!</h3>
+            </div>
+            <div class="col-md-12">
+                <p class="mgtb0">We're experts in this field and we strive to provide high-quality web design, custom development and maintenance. Our goal is to provide unique design, powerful and practical functions, easy operation and user-friendly interface.</p>
+            </div>
+            <div class="col-md-12">
+                <button class="btn btn-link" type="submit">Purchase Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="page4 container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" src="images/icoy_03.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading mgtb0">Full Responsive</h4>
+                        <p class="mgtb0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet ollicitudin.Lorem ipsum dolor sit amet, consectetur.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" src="images/icoy_05.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading mgtb0">Code With Love</h4>
+                        <p class="mgtb0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet ollicitudin.Lorem ipsum dolor sit amet, consectetur.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" src="images/icoy_08.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading mgtb0">Professional Customer Service</h4>
+                        <p class="mgtb0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet ollicitudin.Lorem ipsum dolor sit amet, consectetur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page5 container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="col-md-12">
+                    <h3 class="mgtb0">Latest News</h3>
+                </div>
+                <div class="col-md-6">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="images/tc 121.png" alt="">
+                                <img src="images/datee_03.jpg" class="picps img-responsive">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading mgtb0">Hello World! This is my first post.</h4>
+                            <p class="mgtb0">Cum soccis natoquo pennatibus et magins dis pennatikus montese,nasatur ridiculus mus</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="images/tc 122.png" alt="">
+                                <img src="images/datee_03.jpg" class="picps img-responsive">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading mgtb0">Hello World! This is my first post.</h4>
+                            <p class="mgtb0">Cum soccis natoquo pennatibus et magins dis pennatikus montese,nasatur ridiculus mus</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6"> <div class="media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" src="images/tc 123.png" alt="">
+                            <img src="images/datee_03.jpg" class="picps img-responsive">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading mgtb0">Hello World! This is my first post.</h4>
+                        <p class="mgtb0">Cum soccis natoquo pennatibus et magins dis pennatikus montese,nasatur ridiculus mus</p>
+                    </div>
+                </div></div>
+                <div class="col-md-6">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="images/tc 124.png" alt="">
+                                <img src="images/datee_03.jpg" class="picps img-responsive">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading mgtb0">Hello World! This is my first post.</h4>
+                            <p class="mgtb0">Cum soccis natoquo pennatibus et magins dis pennatikus montese,nasatur ridiculus mus</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-12">
+                    <h3 class="mgtb0">Our Services</h3>
+                </div>
+                <div class="col-md-12">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading newact" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;MANAGEMENT CONSULTING
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    Lorem ipsum dolor sit amet, consectetur scing elit. Ut volutpat rutrum eros sit amet ollicitudin.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet ollicitudin.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur avolutpat ru.Lorem ipsum dolor sit amet, consectetur.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <span class="glyphicon glyphicon-minus"></span>&nbsp;&nbsp;MANAGEMENT CONSULTING
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    Lorem ipsum dolor sit amet, consectetur scing elit. Ut volutpat rutrum eros sit amet ollicitudin.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet ollicitudin.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur avolutpat ru.Lorem ipsum dolor sit amet, consectetur.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <span class="glyphicon glyphicon-minus"></span>&nbsp;&nbsp;MANAGEMENT CONSULTING
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    Lorem ipsum dolor sit amet, consectetur scing elit. Ut volutpat rutrum eros sit amet ollicitudin.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet ollicitudin.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur avolutpat ru.Lorem ipsum dolor sit amet, consectetur.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page6">
+        <div class="container">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <h4 class="mgtb0">Our Team</h4>
+                        <div class="col-md-8 col-md-offset-2">
+                            <p class="mgtb0">orem ipsum dolor sit amet, consectetur scing elit. Ut volutpat rutrsit amet, consectetuum eros sectetur.Lorem ipsum dolorpsusit amet ollicitudin.Lorem ipsum dolor sit etur.Lorem ipsum dolorpsu.Lorem ipsum dolorpsum dolor sitamet, consectetur scing elit. Ut volutpat rutrum e</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-xs-6">
+                                <img src="images/tc.png" alt="" class="img-circle">
+                                <h5>Frankie</h5>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <img src="images/tc18.png" alt="" class="img-circle">
+                                <h5>Elia Erica</h5>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <img src="images/tc 119.png" alt="" class="img-circle">
+                                <h5>Brown Jone</h5>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <img src="images/tc 120.png" alt="" class="img-circle">
+                                <h5>Marh die</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <h4 class="mgtb0">Our Team</h4>
+                        <div class="col-md-8 col-md-offset-2">
+                            <p class="mgtb0">orem ipsum dolor sit amet, consectetur scing elit. Ut volutpat rutrsit amet, consectetuum eros sectetur.Lorem ipsum dolorpsusit amet ollicitudin.Lorem ipsum dolor sit etur.Lorem ipsum dolorpsu.Lorem ipsum dolorpsum dolor sitamet, consectetur scing elit. Ut volutpat rutrum e</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-xs-6">
+                                <img src="images/tc.png" alt="" class="img-circle">
+                                <h5>Frankie</h5>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <img src="images/tc18.png" alt="" class="img-circle">
+                                <h5>Elia Erica</h5>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <img src="images/tc 119.png" alt="" class="img-circle">
+                                <h5>Brown Jone</h5>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <img src="images/tc 120.png" alt="" class="img-circle">
+                                <h5>Marh die</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <h4 class="mgtb0">Our Team</h4>
+                        <div class="col-md-8 col-md-offset-2">
+                            <p class="mgtb0">orem ipsum dolor sit amet, consectetur scing elit. Ut volutpat rutrsit amet, consectetuum eros sectetur.Lorem ipsum dolorpsusit amet ollicitudin.Lorem ipsum dolor sit etur.Lorem ipsum dolorpsu.Lorem ipsum dolorpsum dolor sitamet, consectetur scing elit. Ut volutpat rutrum e</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-xs-6">
+                                <img src="images/tc.png" alt="" class="img-circle">
+                                <h5>Frankie</h5>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <img src="images/tc18.png" alt="" class="img-circle">
+                                <h5>Elia Erica</h5>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <img src="images/tc 119.png" alt="" class="img-circle">
+                                <h5>Brown Jone</h5>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <img src="images/tc 120.png" alt="" class="img-circle">
+                                <h5>Marh die</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <h4 class="mgtb0">Our Team</h4>
+                        <div class="col-md-8 col-md-offset-2">
+                            <p class="mgtb0">orem ipsum dolor sit amet, consectetur scing elit. Ut volutpat rutrsit amet, consectetuum eros sectetur.Lorem ipsum dolorpsusit amet ollicitudin.Lorem ipsum dolor sit etur.Lorem ipsum dolorpsu.Lorem ipsum dolorpsum dolor sitamet, consectetur scing elit. Ut volutpat rutrum e</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-xs-6">
+                                <img src="images/tc.png" alt="" class="img-circle">
+                                <h5>Frankie</h5>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <img src="images/tc18.png" alt="" class="img-circle">
+                                <h5>Elia Erica</h5>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <img src="images/tc 119.png" alt="" class="img-circle">
+                                <h5>Brown Jone</h5>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <img src="images/tc 120.png" alt="" class="img-circle">
+                                <h5>Marh die</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">-->
+                    <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+                    <!--<span class="sr-only">Previous</span>-->
+                <!--</a>-->
+                <!--<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">-->
+                    <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+                    <!--<span class="sr-only">Next</span>-->
+                <!--</a>-->
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="pic">
+                <img src="images/logo.png" />
+            </div>
+            <dl>
+                <dt>COPYRIGHT BY 2012 AWESOME</dt>
+                <dd>COPYRIGHT BY 2012 AWESOME<span>|</span></dd>
+                <dd>PRIVACY STATEMENT<span>|</span></dd>
+                <dd>TERMS OF USE</dd>
+            </dl>
+            <span class="glyphicon glyphicon-chevron-up goto"></span>
+        </div>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+    $('#carousel-example-generic').carousel({
+        interval:'1000'
+    });
+</script>

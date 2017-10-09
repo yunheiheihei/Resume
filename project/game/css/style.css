@@ -1,0 +1,7 @@
+*{padding: 0;margin: 0}
+.center{position: absolute;top:0;bottom: 0;left: 0;right: 0;margin: auto;}
+#box{width: 320px;height: 480px;background: url("../img/game_bg.jpg") no-repeat center;}
+.score{position: absolute;left: 60px;top:12px;font-weight: bold;color: white;font-size: 20px;}
+.wolf{position: absolute;cursor: pointer;}
+.blood{position: absolute;left: 64px;top:65px;background: url("../img/progress.png") no-repeat center;height: 18px;width: 180px;}
+.but{width: 320px;position: absolute;left: 0;top:200px;color:#f60;height: 50px;line-height: 50px;text-align: center;font-weight: bold;font-family: Arial;font-size: 30px;z-index: 5;cursor: pointer;}
