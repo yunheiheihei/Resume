@@ -196,10 +196,10 @@ body{font-size: 0.16rem;font-family: '微软雅黑';background: #e4e5e7;}
 .project .left{left: -0.05rem;transition: transform 0.08s linear 0.51s;transform-origin: bottom;}
 .project .bottom{bottom: -0.05rem;transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);transform-origin: right;}
 .project .active .line{transform: scale(1, 1);}
-.project .active .line .right{transition: transform 0.6s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;transform-origin: bottom;}
-.project .active .line .top{transition: transform 0.4s linear 0.8s;transform-origin: right;}
-.project .active .line .left{transition: transform 0.4s linear 1.2s;transform-origin: top;}
-.project .active .line .bottom{transition: transform 0.6s cubic-bezier(0, 0.53, 0.29, 1) 1.6s;transform-origin: left;}
+.project .active .line.right{transition: transform 0.6s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;transform-origin: bottom;}
+.project .active .line.top{transition: transform 0.4s linear 0.8s;transform-origin: right;}
+.project .active .line.left{transition: transform 0.4s linear 1.2s;transform-origin: top;}
+.project .active .line.bottom{transition: transform 0.6s cubic-bezier(0, 0.53, 0.29, 1) 1.6s;transform-origin: left;}
 .project li:hover{box-shadow: 0.15rem 0.15rem 0.15rem rgba(0,0,0,0.5);transform: scale(1.05);}
 .project li:hover .line{background: rgba(255,255,255,0.5)}
 
